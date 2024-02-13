@@ -1,6 +1,9 @@
+from sqlalchemy import Column, Integer, ForeignKey
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
 class Registro():
 
-    def __init__(self, id_registro, id_paciente, id_medico, resul_tb, result_no_tb, result_normal) :
+    def __init__(self, id_registro, id_paciente, id_medico, resul_tb, result_no_tb, result_normal=None):
         self.id_registro = id_registro
         self.id_paciente = id_paciente
         self.id_medico = id_medico
